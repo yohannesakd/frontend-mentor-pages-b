@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --cyan: hsl(184, 100%, 22%);
+  --dark-cyan: hsl(179, 100%, 13%);
+  --clr-text: hsla(0, 0%, 100%, 0.75);
+  --clr-grey: hsl(0, 0%, 95%);
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  display: grid;
+  place-items: center;
+  min-height: 100vw;
+  width: 100%;
+  background-color: var(--clr-grey);
+}
+
+.container {
+  display: grid;
+  padding: 5.5rem 1.5rem;
+  place-items: center;
+}
+
+.card {
+  padding: 3rem;
+  max-width: 540px;
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.card-content {
+  flex: 1 1 0%;
+}
+.card-logo {
+  margin-bottom: 1.75rem;
+}
+.card-title {
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: var(--clr-grey);
+  margin-bottom: 1.25rem;
+}
+.card-text {
+  color: var(--clr-text);
+  font-size: 15px;
+  line-height: 1.65;
+  font-weight: 400;
+}
+.card-btn {
+  text-decoration: none;
+  font-size: 15px;
+  width: max-content;
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  margin-top: 1.75rem;
+  border-radius: 4rem;
+  background-color: var(--clr-grey);
+}
+
+.card:nth-child(1) {
+  background-color: var(--orange);
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+.card:nth-child(1) > a {
+  color: var(--orange);
+}
+.card:nth-child(2) {
+  background-color: var(--cyan);
+}
+.card:nth-child(2) > a {
+  color: var(--cyan);
+}
+.card:nth-child(3) {
+  background-color: var(--dark-cyan);
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.card:nth-child(3) > a {
+  color: var(--dark-cyan);
+}
+
+@media (min-width: 740px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0;
+    width: 920px;
+  }
+  .card-content {
+    margin-bottom: 3.5rem;
+  }
+  .card:nth-child(1) {
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+  .card:nth-child(3) {
+    background-color: var(--dark-cyan);
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+} ;
