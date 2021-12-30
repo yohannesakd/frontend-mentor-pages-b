@@ -89,6 +89,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     padding: 0;
     width: 920px;
+    margin-top: 2.5rem;
   }
   .card-content {
     margin-bottom: 3.5rem;
@@ -100,4 +101,12 @@ body {
     background-color: var(--dark-cyan);
     border-radius: 0 0.5rem 0.5rem 0;
   }
-} ;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
